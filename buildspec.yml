@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Starting build..."
+      - echo "No build steps required for static HTML, directly zipping files."
+  post_build:
+    commands:
+      - echo "Build complete. Zipping artifacts."
+      - zip -r website_artifact.zip . -x "*.git*" "buildspec.yml" "terraform/*" # Exclude .git folder, buildspec, and terraform folder
+artifacts:
+  files:
+    - website_artifact.zip
