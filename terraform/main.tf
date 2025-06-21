@@ -1,9 +1,9 @@
 provider "aws" {
-  region = "eu-north-1" # Or your desired AWS region
+  region = "ap-south-1" # Or your desired AWS region
 }
 
 resource "aws_s3_bucket" "static_website_bucket" {
-  bucket = "rugved-bucket-unique-name" # Replace with a unique bucket name
+  bucket = "nehanth-bucket-unique-name" # Replace with a unique bucket name
   # acl = "public-read" # Keep this commented out or removed as per previous fix
 
   website {
